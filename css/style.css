@@ -1,0 +1,38 @@
+.heading
+{
+	background-color: #211f31;
+	width: 100%;
+	text-align: center;
+	color: white;
+}
+#map
+{
+	border: solid 1px gray;
+	height: 625px;
+	position: relative;
+}
+#hide,#show {
+        width: 49%;
+      }
+.list
+{
+	font-size: 20px;
+	padding: 10px;
+	cursor:pointer;
+}
+.heading-container{
+     margin-bottom: 20px;
+}
+.logo{
+	height: 90px;
+	width: 90px;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+.searchlist{
+	width: 99%;
+}
+.search{
+	margin-top: 7px;
+	margin-bottom: 7px;
+}

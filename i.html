@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project:Neighbourhood Map</title>
+  <script src="js/jquery.min.js">
+  </script>
+  <script src="js/knockout.js">
+  </script>
+  <script src="bootstrap/js/bootstrap.js">
+  </script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row heading-container">
+      <div class="col-md-12 heading">
+        <div class="col-md-6"><img class="img-responsive logo" src="image/logo.jpg"></div>
+        <h1 class="text-uppercase text-right">Royal City - Patiala</h1>
+        <h4 class="text-uppercase text-right">Punjab</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-9" id="map"></div>
+      <div class="col-md-3">
+        <div>
+          <input id="show" type="button" value="Show Venues"> <input id="hide" type="button" value="Hide Venues">
+        </div>
+        <div class="form-group search">
+          <input class="form-control searchlist" data-bind="value:search,valueUpdate:'afterkeydown', event: {keyup: filterList}" placeholder="Search" type="text">
+        </div>
+        <div class="nav navbar-nav searchlist" data-bind="foreach:Venues">
+          <a class="list-group-item list" data-bind="css: {active: selected}, text: name, visible: show, click: $parent.DropMarker,text:title"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/app.js">
+  </script> 
+  <script async defer onerror="error()" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDltr8RozGbWHsVXwxxXGY18n2PHbd2WJM&libraries=geometry&v=3&callback=initMap">
+  </script>
+</body>
+</html>
